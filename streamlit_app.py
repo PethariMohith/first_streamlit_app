@@ -9,4 +9,6 @@ streamlit.header('Build Your Own Fruit Smoothie')
 
 import pandas
 my_fruit_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
+#lets Put a Pick list here they pick the fruits in the list they include fruits
+streamlit.multiselect("Pick Some Fruits :",list(my_fruit_list.index))
 streamlit.dataframe(my_fruit_list)
